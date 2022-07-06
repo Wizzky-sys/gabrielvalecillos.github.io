@@ -1,0 +1,282 @@
+:root {
+  --colordarkblue: rgb(5, 20, 31);
+  --colorsemiblue: #0F4C75;
+  --colorblue: #3282B8;
+  --colorbluelight: #BBE1FA;
+  --colorblanco: #fff;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--colorsemiblue);
+  font-family: 'Merriweather', serif;
+  font-size: 1.7rem;
+  line-height: 3rem;
+}
+
+p {
+  padding: 60px;
+  font-size: 30px;
+  color: #fff;
+}
+
+
+.header {
+  position: sticky;
+  background-color: rgba(5, 20, 31, 0.4);
+  backdrop-filter: blur(5px);
+  height: 80px;
+  top: 0;
+  left: 0;
+
+}
+
+/* TOGGLE */
+.nav-toggle {
+  display: none;
+}
+
+.logo-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.nav {
+ display: flex;
+ height: 80px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+  list-style: none;
+}
+
+.nav-menu-item {
+  font-size: 18px;
+  margin: 0 40px;
+  line-height: 80px;
+  width: max-content;
+}
+
+.nav-menu-link,
+.intro_button_style {
+  text-decoration: none;
+  background-image: linear-gradient(white, white);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  transition: background-size .5s;
+}
+
+.nav-menu-link:hover,
+.intro_button_style:hover,
+.nav-menu-link_active {
+  background-size: 100% 3px;
+}
+
+
+.grow {
+  margin-left: 140px;
+}
+
+.nav-menu-link {
+  padding: 8px 12px;
+}
+
+.intro {
+  margin-top: -80px;
+  display: flex;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+}
+.intro_second {
+  color: #FFFFFF;
+  font-family: 'Merriweather', serif;
+  font-size: 2rem;
+  line-height: 3rem;
+  margin-bottom: 20px;
+
+}
+.intro h1 {
+  text-align: center;
+  letter-spacing:3px;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+  width: 100%;
+  color: #FFFFFF;
+  font-size: 62px;
+  line-height: 1.071;
+  text-shadow: 0 0 20px rgb(0 0 0 / 50%);
+
+}
+.nombre::after {
+  content: '';
+}
+.intro h3 {
+  width: 100%;
+  line-height: 20px;
+  color: #FFFFFF;
+  text-shadow: 0 0 20px rgb(0 0 0 / 50%);
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.button_about {
+  list-style: none;
+  text-decoration: none;
+  color: var(--colorblanco);
+  text-transform: uppercase;
+  border-radius: 30px;
+}
+
+.intro_button_style:hover {
+  background-color: var(--colorblue);
+  transition: 1s;
+}
+
+.intro :nth-child(1) {
+  order: 3;
+}
+
+.intro :nth-child(2) {
+  order: 3;
+}
+
+.intro :nth-child(3) {
+  order: 2;
+}
+
+.intro_button_style {
+
+  background-color: var(--colordarkblue);
+  border: none;
+  border: 1px solid var(--colorblue);
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 11vh;
+  padding: 0;
+}
+
+.wrapper .icon {
+  color: var(--colorblanco);
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 20px;
+  cursor: pointer;
+}
+.fa-brands {
+  transition: all .5s;
+}
+
+.fa-linkedin:hover,
+.fa-github:hover,
+.fa-whatsapp:hover {
+ transform:scale(1.5);
+ transition: all .5s ease;
+}
+
+
+.portfolio {
+
+  height: 100vh;
+  width: 100%;
+}
+
+
+ /* MOBILE */
+ @media (max-width: 1000px) {
+
+
+   .nav-menu {
+     display: flex;
+     position: fixed;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+     margin: 0;
+     background-color: var(--colordarkblue);
+     width: 100%;
+     height: 100vh;
+     backdrop-filter: blur(10px);
+     transform: translateY(-100vh);
+     transition: 1s;
+     z-index: 1;
+     padding: 0;
+     padding-top: 80px;
+
+   }
+
+   
+
+   .grow {
+     margin-left: 40px;
+
+   }
+
+   .logo-btn {
+     z-index: 2;
+   }
+
+   .nav-menu_visible {
+     transform: translateY(0%);
+     transition: 1s;
+   }
+
+
+   .nav-toggle {
+     display: flex;
+     width: 0px;
+     position: relative;
+     z-index: 100;
+     order: 1;
+     width: 40px;
+     justify-content: flex-end;
+     color: white;
+     background: none;
+     border: none;
+     font-size: 30px;
+     cursor: pointer;
+     align-items: center;
+     margin-right: 20px;
+
+   }
+
+ }
