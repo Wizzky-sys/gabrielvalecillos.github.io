@@ -12,18 +12,39 @@ navToggle.addEventListener("click", () => {
   }
 });
 
-const navegador = document.querySelector("li .home")
-const navegador2 = document.querySelector("li .portfolio")
-navegador2.addEventListener("click", () =>{
-  navegador.classList.remove("nav-menu-link_active");
-  navegador2.classList.add("nav-menu-link_active")
-} )
+let home = document.querySelector("li .home");
 
-let nombre = document.getElementById('nombre');
-window.addEventListener("scroll", function(){
-  let value = window.scrollY;
-  nombre.style.marginRight = value * 1.25 + 'px';
-})
+let portfolio = document.querySelector("li .portfolio");
+
+let technology = document.querySelector("li .technology");
+
+let contact = document.querySelector("li .contact");
+
+home.addEventListener("click", () =>{
+  contact.classList.remove("nav-menu-link_active");
+  portfolio.classList.remove("nav-menu-link_active");
+  technology.classList.remove("nav-menu-link_active");
+  home.classList.add("nav-menu-link_active")
+});
+
+portfolio.addEventListener("click", () =>{
+  home.classList.remove("nav-menu-link_active");
+  contact.classList.remove("nav-menu-link_active");
+  technology.classList.remove("nav-menu-link_active");
+  portfolio.classList.add("nav-menu-link_active")
+});
+technology.addEventListener("click", () =>{
+  home.classList.remove("nav-menu-link_active");
+  portfolio.classList.remove("nav-menu-link_active");
+  contact.classList.remove("nav-menu-link_active");
+  technology.classList.add("nav-menu-link_active")
+});
+contact.addEventListener("click", () =>{
+  home.classList.remove("nav-menu-link_active");
+  portfolio.classList.remove("nav-menu-link_active");
+  technology.classList.remove("nav-menu-link_active");
+  contact.classList.add("nav-menu-link_active")
+});
 
 
 
