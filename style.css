@@ -90,8 +90,9 @@ body {
 }
 
 .intro {
-  background-image: url(/waveintro.svg);
+  background-image: url(/fondonice.jpg);
   background-position: center;
+  background-size: cover;
 
 
 
@@ -204,6 +205,16 @@ body {
   transition: .3s;
   color: rgb(3, 212, 3);
 }
+
+.linkedin:hover {
+  transition: .3s;
+  color: rgb(50, 37, 154);
+}
+
+.github:hover {
+  transition: .3s;
+  color: rgb(96, 122, 126);
+}
 .fa-brands {
   transition: all .5s;
 }
@@ -216,39 +227,158 @@ body {
 }
 
 
-.portfolio {
-  background-image: url(/waveportfolio.svg);
-  background-position: center;
-  height: 100vh;
+#cv {
+  background-size: cover;
+  height: 1500px;
   width: 100%;
+  color: #FFFFFF;
 }
+
+.cv-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 12vh;
+  text-align: center;
+  margin: 0 20px;
+  font-size: 18px;
+}
+
+.cv-intro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+.cv-h1 {
+  margin-bottom: 25px;
+}
+.cv-info {
+  font-size: 18px;
+  line-height: 35px;
+  margin: 0 20px;
+  width: calc(100%/2);
+}
+
+.cv-personal-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+
+
+
+}
+
+
+.cv-skills {
+  padding-top: 30px;
+
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+
+  padding: 0 5px;
+  height: 20px;
+  width: 250px;
+}
+
+
+
+.progress-value{
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 10px;
+  width: 0%;
+}
+.html {
+  width: 80%;
+}
+.css {
+  width: 68%;
+}
+
+.javascript {
+  width: 48%;
+}
+
+.uidesign {
+  width: 50%;
+}
+
 
 
 
  /* MOBILE */
  @media (max-width: 1000px) {
+    .cv-intro {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
 
+    .cv-info {
+      display: flex;
+      margin: 0 20px;
+      width: calc(100%/1.5);
+    }
 
+    .cv-name {
+      font-size: 0.6em;
+    }
+
+    .cv-personal-data {
+      padding-top: 20px;
+      justify-content: space-around;
+      flex-direction: column;
+    }
    .nav-menu {
      display: flex;
-     position: absolute;
+     position: fixed;
      flex-direction: column;
      align-items: center;
      justify-content: flex-start;
      margin: 0;
      background-color: var(--colordarkblue);
      width: 100%;
-     height: 100vh;
      backdrop-filter: blur(10px);
-     transform: translateY(-100vh);
+     transform: translateY(-100%);
      transition: 1s;
-     z-index: 1;
+     height: 100vh;
+     z-index: 2;
      padding: 0;
      padding-top: 80px;
+     overflow: hidden;
 
    }
 
-   
+   .nav-menu_visible {
+    transform: translateY(0%);
+    transition: 1s;
+  }
+
+   .intro {
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .nombre { 
+    text-align: center;
+   }
+
+
+   .intro_button {
+    display: none;
+   }
 
    .grow {
      margin-left: 40px;
@@ -257,11 +387,6 @@ body {
 
    .logo-btn {
      z-index: 2;
-   }
-
-   .nav-menu_visible {
-     transform: translateY(0%);
-     transition: 1s;
    }
 
 
