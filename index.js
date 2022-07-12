@@ -1,16 +1,42 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navToggle2 = document.querySelector(".nav-toggle i");
 const navMenu = document.querySelector(".nav-menu");
+const clickNav = document.querySelector (".home")
+const clickNav2 = document.querySelector (".portfolio")
+const clickNav3 = document.querySelector (".technology")
+const clickNav4 = document.querySelector (".contact")
 
 
-navToggle.addEventListener("click", () => {
+
+
+function hamburguerMenu () {
   navMenu.classList.toggle("nav-menu_visible");
+  if (navMenu.classList.contains("nav-menu_visible")) {
+    navToggle2.setAttribute("class", "fa-solid fa-x");
+
+  } else {
+    navToggle2.setAttribute("class", "fas fa-bars");
+
+  }
+};
+
+function removeMenu () {
+  navMenu.classList.remove("nav-menu_visible");
   if (navMenu.classList.contains("nav-menu_visible")) {
     navToggle2.setAttribute("class", "fa-solid fa-x");
   } else {
     navToggle2.setAttribute("class", "fas fa-bars");
   }
-});
+};
+
+
+navToggle.addEventListener("click", hamburguerMenu);
+clickNav.addEventListener("click", removeMenu);
+clickNav2.addEventListener("click", removeMenu);
+clickNav3.addEventListener("click", removeMenu);
+clickNav4.addEventListener("click", removeMenu);
+
+
 
 let home = document.querySelector("li .home");
 
@@ -19,6 +45,12 @@ let portfolio = document.querySelector("li .portfolio");
 let technology = document.querySelector("li .technology");
 
 let contact = document.querySelector("li .contact");
+
+const a = document.querySelector(".nav-menu a");
+
+
+
+
 
 home.addEventListener("click", () =>{
   contact.classList.remove("nav-menu-link_active");
@@ -45,38 +77,6 @@ contact.addEventListener("click", () =>{
   technology.classList.remove("nav-menu-link_active");
   contact.classList.add("nav-menu-link_active")
 });
-
-
-
-
-
-// const texts = ['Hello, World']
-// let count = 0;
-// let index = 0;
-// let currentText = '';
-// let letter = '';
-// function type () {
-//   if (count === texts.length) {
-//     count = 0;
-//   }
-//   currentText = texts[count];
-//   letter = currentText.slice(0, ++index);
-
-//   document.querySelector(".intro_second").textContent = letter;
-//   if (letter.length === currentText.length) {
-//     count++;
-//     index = 0;
-//   }
-//   setTimeout(type, 150);
-// }
-
-// type();
-
-
-
-
-
-
 
 
 
