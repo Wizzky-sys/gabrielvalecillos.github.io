@@ -11,25 +11,26 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
   </head>
   <body>
-    <!-- header =================================================================================================== -->
+
+
+    <!-- header  -->
     <header class="header">
       <nav class="nav">   
         <button class="nav-toggle">
           <i class="fas fa-bars"></i>
         </button>
         <div class="logo-btn">
-          <img class="logo" src="logotipo.png" alt="10" width="100"
-          height="100">
+          <img class="logo" src="logotipo.png" alt="10" width="100" height="100">
         </div>
         <ul class="nav-menu">
           <li class="nav-menu-item">
             <a href="#home" class="nav-menu-link nav-link nav-menu-link_active home">Home</a>
           </li>
           <li class="nav-menu-item">
-            <a href="#portfolio" class="nav-menu-link nav-link portfolio">Portfolio</a>
+            <a href="#cv" class="nav-menu-link nav-link portfolio">Portfolio</a>
           </li>
           <li class="nav-menu-item">
-            <a href="#technology" class="nav-menu-link nav-link technology">Technology</a>
+            <a href="#projects" class="nav-menu-link nav-link technology">Projects</a>
           </li>
           <li class="nav-menu-item grow">
             <a href="#contact" class="nav-menu-link nav-link contact">Contact Me</a>
@@ -37,26 +38,30 @@
         </ul>
       </nav>
     </header>
-    <!-- /header =================================================================================================== -->
+
+
     <main>
-    <!-- intro section ============================================================================================= -->
-      <section>
-        <div class="intro" id="home">
-          
+    <!-- intro section -->
+      <section id="home">
+        <div class="intro">
           <div class="nombre" id="nombre">
             <h1> I'm <br> Gabriel Valecillos</h1>
           </div>
           <div class="intro_second">
             <h3>Hello, world</h3>
           </div>
-          <div class="intro_button">
-              <button class="intro_button_style">
-                <a href="#portfolio" class="button_about">More about me</a>
-              </button>
-          </div>
         </div>
-    <!-- /intro section ============================================================================================= -->
-    <!-- social section ============================================================================================= -->
+        <div class="intro_button">
+          <button class="intro_button_style">
+            <a href="#cv" class="button_about">More about me</a>
+          </button>
+      </div>
+    <!-- /intro section -->
+
+
+
+
+    <!-- social section -->
         <ul class="wrapper">
           <li>
             <a href="https://www.linkedin.com/in/gabriel-valecillos-847126210/" target="_blank" class="icon linkedin">
@@ -75,15 +80,87 @@
           </li>
         </ul>
       </section>
-    <!-- /social section ============================================================================================= -->
 
-      <section id="portfolio">
 
-        <div class="portfolio">
-          
+    <!-- about section -->
+      <section id="cv">
+        <div class="cv-main">
+          <h5>ABOUT</h5>
+          <span class="cv-h1"> 
+            <h1>Let me introduce myself.</h1>
+          </span>
+        </div>
+        <div class="cv-intro">
+          <div class="cv-foto">
+            <img src="/logotipo.png" alt="10" width="100" height="100">
+          </div>
+          <p class="cv-info">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dolores ex! Provident culpa in saepe sunt, 
+            ipsam adipisci veniam magnam, temporibus asperiores non quaerat sint earum et soluta cumque quo?
+            Lorem, ipsu
+          </p>
+          <br>
+        </div>
+        <div class="cv-personal-data">
+          <div class="datosbasicos">
+            <p class="cv-info cv-name">
+              <strong>FULL NAME:</strong>
+            </p>
+            <p class="cv-info cv-name">
+              Gabriel Alejandro Valecillos Aular
+            </p>
+            <p class="cv-info cv-name">
+              <strong>BIRTH DATE:</strong>
+            </p>
+            <p class="cv-info cv-name">
+              Jan 30, 1999
+            </p>
+            <p class="cv-info cv-name">
+              <strong>JOB:</strong>
+            </p>
+            <p class="cv-info cv-name">
+              Frontend Web Developer
+            </p>
+            <p class="cv-info cv-name">
+              <strong>EMAIL:</strong>
+            </p>
+            <p class="cv-info cv-name">
+              alejandrovalecillosaular@gmail.com
+            </p>
+          </div>
+          <div class="cv-skills">
+            <h3 class="cv-info">
+              SKILLS:
+            </h3>
+            <p class="cv-info">HTML:</p>
+            <div class="progress">
+              <div class="progress-value html"></div>
+            </div>
+            <p class="cv-info">CSS3:</p>
+            <div class="progress">
+              <div class="progress-value css"></div>
+            </div>
+            <p class="cv-info">Javascript:</p>
+            <div class="progress">
+              <div class="progress-value javascript"></div>
+            </div>
+            <p class="cv-info">UX/UI:</p>
+            <div class="progress">
+              <div class="progress-value uidesign"></div>
+            </div>
+          </div>
         </div>
       </section>
-      
+
+
+    <!-- Projects section -->
+      <section id="projects">
+        <div class="projects-main">
+
+        </div>
+      </section>
+
+
     </main>
   </body>
   <script defer src="index.js"></script>
