@@ -17,6 +17,42 @@ body {
   font-size: 1.7rem;
   line-height: 3rem;
 }
+.pre {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 199;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 1;
+}
+
+.preloader {
+  width: 70px;
+  height: 70px;
+  border: 10px solid #eee;
+  border-top: 10px solid blue;
+  border-radius: 50%;
+  animation-name: girar;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+}
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 
 .header {
   position: sticky;
@@ -229,7 +265,7 @@ body {
 
 #cv {
   background-size: cover;
-  height: 1500px;
+  height: 800px;
   width: 100%;
   color: #FFFFFF;
 }
@@ -304,7 +340,7 @@ body {
   width: 68%;
 }
 
-.javascript {
+.js {
   width: 48%;
 }
 
@@ -319,9 +355,17 @@ body {
 }
 
 
-
  /* MOBILE */
- @media (max-width: 1000px) {
+ @media (max-width: 1100px) {
+  .grow {
+    margin-left: 70px;
+  }
+ }
+
+ @media (max-width: 900px) {
+    #cv {
+      height: 1400px;
+    }
     .cv-intro {
       display: flex;
       align-items: center;
@@ -344,6 +388,7 @@ body {
       padding-top: 20px;
       justify-content: space-around;
       flex-direction: column;
+
     }
    .nav-menu {
      display: flex;
