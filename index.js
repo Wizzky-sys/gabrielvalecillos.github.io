@@ -14,6 +14,13 @@ const clickNav4 = document.querySelector (".contact")
 //   }
 // };
 // location();
+window.onload = function (){
+  var preload = document.querySelector (".pre");
+  preload.style.visibility = 'hidden';
+  preload.style.opacity = '0';
+
+}
+
 function hamburguerMenu () {
   navMenu.classList.toggle("nav-menu_visible");
   if (navMenu.classList.contains("nav-menu_visible")) {
@@ -111,5 +118,13 @@ function myFunction() {
     contact.classList.remove("nav-menu-link_active");
   } 
 };
+
+
+
+
+
+
+
+
 
 
