@@ -1,6 +1,6 @@
 :root {
   --colordarkblue: rgb(5, 20, 31);
-  --colorsemiblue: #0F4C75;
+  --colorsemiblue: #10598a;
   --colorblue: #3282B8;
   --colorbluelight: #BBE1FA;
   --colorblanco: #fff;
@@ -323,7 +323,7 @@ body {
 
 .icon-skill {
   padding: 15px;
-  font-size: 65px;
+  font-size: 165px;
 }
 .html {
   width: 80%;
