@@ -124,14 +124,6 @@ body {
   background-size: 100% 3px;
 }
 
-
-
-
-.grow {
-  margin-left: 140px;
-}
-
-
 .intro {
   background-image: url(/fondonice.jpg);
   background-attachment: fixed;
@@ -287,7 +279,9 @@ body {
   margin: 0 20px;
   font-size: 20px;
 }
-
+.cv-foto {
+  border-radius: 50px;
+}
 .cv-intro {
   display: flex;
   align-items: center;
@@ -379,11 +373,6 @@ body {
 .projcard:hover{
   transform: translate(0px, -5px);
 }
-.projcard:hover .img3class {
-  transform: scale(1.06);
-  border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
 
 .img3class {
   position: absolute;
@@ -448,7 +437,6 @@ body {
   font-size: 12px;
   user-select: none;
   color: black;
-  cursor: pointer;
 }
 .projcard-tag {
   display: inline-flex;
@@ -468,6 +456,11 @@ body {
   left: 100px;
   cursor: pointer;
 }
+
+.boton-demo-active:hover {
+  transform: scale(1.10);
+  transition: ease-in-out .3s;
+}
 .boton-demo-active {
     border-radius: 5px;
   background-color: black;
@@ -475,10 +468,85 @@ body {
   height: 30px;
   color: #FFFFFF;
   cursor: pointer;
+  transition: ease-in-out .3s;
 }
 
+
+
+#contact {
+  height: 100vh;
+}
+
+#form {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 300px;
+
+}
+input::placeholder {
+  color: #FFFFFF;
+  transition: ease .5s;
+}
+
+input:focus::placeholder {
+  transform: translateY(-95%);
+  color: #FFFFFF;
+  transition: ease .5s;
+}
+
+input,
+textarea {
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-family: 'Lato', sans-serif;
+  width: 50%;
+  height: 50px;
+  padding: 0px 15px 0px 15px;
+  
+  background: transparent;
+  outline: none;
+  color: #ffffff;
+  
+  border: solid 1px  #ffffff;
+  
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+}
+
+textarea {
+  height: 150px;
+  max-height: 100px;
+  padding: 15px;
+}
+
+#submit {
+  width: 100px;
+  padding: 0;
+  margin: -5px 0px 0px 0px;
+  
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875em;
+  color: #FFFFFF;;
+  
+  outline:none;
+  cursor: pointer;
+  
+  border: solid 1px #FFFFFF;
+}
+
+
+
+
  /* MOBILE */
- @media (max-width: 900px) {
+@media (max-width: 900px) {
   #projects {
     height: 3500px;
   }
@@ -501,108 +569,91 @@ body {
     height: 1500px;
   }
 
-    .cv-intro {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-    }
+  .cv-intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+  }
 
-    .cv-info {
-      display: flex;
-      margin: 0 20px;
-      width: calc(100%/1.5);
-    }
+  .cv-info {
+    display: flex;
+    margin: 0 20px;
+    width: calc(100%/1.5);
+  }
 
-    .cv-name {
-      font-size: 0.5em;
-    }
+  .cv-name {
+    font-size: 0.5em;
+  }
 
-    .cv-personal-data {
-      padding-top: 20px;
-      justify-content: space-around;
-      flex-direction: column;
+  .cv-personal-data {
+    padding-top: 20px;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .nav-menu {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    background-color: var(--colordarkblue);
+    width: 100%;
+    backdrop-filter: blur(10px);
+    transform: translateY(-100%);
+    transition: 1s;
+    height: 100vh;
+    z-index: 2;
+    padding: 0;
+    padding-top: 80px;
+    overflow: hidden;
+  }
 
-    }
-   .nav-menu {
-     display: flex;
-     position: fixed;
-     flex-direction: column;
-     align-items: center;
-     justify-content: flex-start;
-     margin: 0;
-     background-color: var(--colordarkblue);
-     width: 100%;
-     backdrop-filter: blur(10px);
-     transform: translateY(-100%);
-     transition: 1s;
-     height: 100vh;
-     z-index: 2;
-     padding: 0;
-     padding-top: 80px;
-     overflow: hidden;
-
-   }
-
-   .nav-menu_visible {
+  .nav-menu_visible {
     transform: translateY(0%);
     transition: 1s;
   }
 
-   .intro {
+  .intro {
     padding: 0;
     justify-content: center;
     align-items: center;
-   }
-
-
-   .intro_button {
-    display: none;
-   }
-
-   .grow {
-     margin-left: 40px;
-
-   }
-
-   .logo-btn {
-     z-index: 2;
-   }
-
-
-   .nav-toggle {
-     display: flex;
-     width: 0px;
-     position: relative;
-     z-index: 100;
-     order: 1;
-     width: 40px;
-     justify-content: flex-end;
-     color: white;
-     background: none;
-     border: none;
-     font-size: 30px;
-     cursor: pointer;
-     align-items: center;
-     margin-right: 20px;
-
-   }
-
   }
 
- @media (max-width: 1300px) {
+  .intro_button {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+    width: 0px;
+    position: relative;
+    z-index: 100;
+    order: 1;
+    width: 40px;
+    justify-content: flex-end;
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+}
+
+@media (max-width: 1300px) {
   .projcard-container { 
     width: 85%;
     margin: 0px auto;
     padding-top: 100px;
     height: 1500px;
-
     grid-template-columns: repeat(1fr, 2);
-
-    
-  
   }
+
   .img3 {
     display: flex;
     position: relative;
@@ -610,24 +661,23 @@ body {
     width: 100%;
     height: 150px;
     justify-content: center;
-
-
   }
+
   .img3class {
     padding-top: 5px;
     border-radius: 15px;
     height: 200px;
     width: 80%;
-
   }
+
   .projcard {
     display: flex;
     flex-direction: column;
     height: 600px;
     width: 100%;
     max-width: 500px;
-
   }
+  
   .projcard-textbox {
     display: flex;
     margin: auto;
@@ -655,11 +705,4 @@ body {
     bottom: 20px;
   }
   
-
-
- @media (max-width: 1100px) {
-  .grow {
-    margin-left: 70px;
-  }
- }
 }

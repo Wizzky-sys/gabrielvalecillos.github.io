@@ -5,15 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gabriel Valecillos</title>
-    <link rel="icon" href="logotipo.png" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1531/1531344.png" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/83c76830de.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
   </head>
   <body>
+
+    <!-- Pre-loader -->
     <div class="pre">
       <div class="preloader"></div>
     </div>
+
+
     <!-- header  -->
     <header class="header">
       <nav class="nav">   
@@ -33,7 +37,7 @@
           <li class="nav-menu-item">
             <a href="#projects" class="nav-menu-link nav-link projects">Projects</a>
           </li>
-          <li class="nav-menu-item grow">
+          <li class="nav-menu-item">
             <a href="#contact" class="nav-menu-link nav-link contact">Contact Me</a>
           </li>
         </ul>
@@ -43,7 +47,7 @@
 
     <main>
     
-      <!-- intro section -->
+      <!-- Intro -->
       <section id="home">
         <div class="intro">
           <div class="nombre" id="nombre">
@@ -79,7 +83,7 @@
       </section>
 
 
-    <!-- about section -->
+      <!-- About -->
       <section id="about">
         <div class="cv-main">
           <h5>ABOUT</h5>
@@ -88,8 +92,8 @@
           </span>
         </div>
         <div class="cv-intro">
-          <div class="cv-foto">
-            <img src="/logotipo.png" alt="10" width="100" height="100">
+          <div>
+            <img class= "cv-foto" src="https://avatars.githubusercontent.com/u/59260137?s=400&u=9eb83792b7593319d71020dd0c2a71ccb15f529b&v=4" alt="10" width="100" height="100">
           </div>
           <p class="cv-info">
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum, dolores ex! Provident culpa in saepe sunt, 
@@ -139,7 +143,7 @@
       </section>
 
 
-    <!-- Projects section -->
+      <!-- Projects -->
       <section id="projects">
         <div class="cv-main">
           <span class="cv-h1 portfolio-h1"> 
@@ -174,7 +178,7 @@
             <div class="projcard projcard2">
               <div class="projcard-innerbox">
                 <div class="img3">
-                  <img class="img3class" src="https://picsum.photos/800/600?image=1039"/>
+                  <img class="img3class" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSGsF4YHIvQyou0IldLPWzDVihV03k0i-Pag&usqp=CAU"/>
                 </div>
                 <div class="projcard-textbox">
                   <div class="projcard-title">Proyecto #2</div>
@@ -230,6 +234,23 @@
                 </div>
               </div>
             </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="cv-main">
+          <span class="cv-h1 portfolio-h1"> 
+            <h5>CONTACT</h5>
+            <p>I'd Love To Hear From You.</p>
+          </span>
+        </div>
+        <form id="form">
+          <input id="name" type="text" placeholder="Nombre">
+
+          <input id="email" type="text" placeholder="Email">
+          <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
+          <input id="submit" type="submit" value="Sent">
+        </form>
       </section>
     </main>
   </body>

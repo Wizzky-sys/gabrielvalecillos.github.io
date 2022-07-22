@@ -1,6 +1,3 @@
-
-
-
 const navToggle = document.querySelector(".nav-toggle");
 const navToggle2 = document.querySelector(".nav-toggle i");
 const navMenu = document.querySelector(".nav-menu");
@@ -100,6 +97,7 @@ contact.addEventListener("click", () =>{
 
 const scrollHome = document.getElementById("home");
 const scrollAbout = document.getElementById("about");
+const scrollContact = document.getElementById("contact");
 
 
 console.log (scrollAbout.clientHeight)
@@ -122,7 +120,12 @@ const onScroll = () => {
   if (scroll > scrollAbout.clientHeight ) {
     removeActiveBar();
     projects.classList.add("nav-menu-link_active");
-  } 
+  }
+  if (scroll > scrollContact.clientHeight ) {
+    removeActiveBar();
+    contact.classList.add("nav-menu-link_active");
+  }
+
 }
 // Use the function
 window.addEventListener('scroll', onScroll)
