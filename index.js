@@ -97,37 +97,42 @@ contact.addEventListener("click", () =>{
 
 const scrollHome = document.getElementById("home");
 const scrollAbout = document.getElementById("about");
+const scrollProjects = document.getElementById("projects");
 const scrollContact = document.getElementById("contact");
 
 
-console.log (scrollAbout.clientHeight)
-console.log (scrollHome.clientHeight)
+console.log (scrollHome.clientHeight+ 'Home')
+console.log (scrollAbout.clientHeight+ 'About')
+console.log (scrollProjects.clientHeight+ 'Projects')
+console.log (scrollContact.clientHeight + 'Contact')
+
+
+
 const onScroll = () => {
 
   // Get scroll value
   const scroll = document.documentElement.scrollTop
 
   // If scroll value is more than 0 - add class
-  if (scroll > 50) {
+  if (scroll > 0) {
     removeActiveBar();
     home.classList.add("nav-menu-link_active");
 
   }
-  if (scroll > 230) {
+  if (scroll > scrollHome.clientHeight) {
     removeActiveBar();
     about.classList.add("nav-menu-link_active");
   }
-  if (scroll > scrollAbout.clientHeight ) {
+  if (scroll > scrollAbout.clientHeight + 150 ) {
     removeActiveBar();
     projects.classList.add("nav-menu-link_active");
   }
-  if (scroll > scrollContact.clientHeight ) {
+  if (scroll > scrollProjects.clientHeight + 1000 ) {
     removeActiveBar();
     contact.classList.add("nav-menu-link_active");
   }
 
 }
-// Use the function
 window.addEventListener('scroll', onScroll)
 
 
