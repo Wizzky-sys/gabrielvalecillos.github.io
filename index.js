@@ -1,25 +1,26 @@
+
+
+
 const navToggle = document.querySelector(".nav-toggle");
 const navToggle2 = document.querySelector(".nav-toggle i");
 const navMenu = document.querySelector(".nav-menu");
 const clickNav = document.querySelector (".home")
-const clickNav2 = document.querySelector (".portfolio")
-const clickNav3 = document.querySelector (".technology")
+const clickNav2 = document.querySelector (".about")
+const clickNav3 = document.querySelector (".projects")
 const clickNav4 = document.querySelector (".contact")
 
 
+window.onload = setTimeout(removeLoader, 1500); 
 
-// function location () {
-//   if (location.href === true) {
-//     alert("llegaste a mi cv")
-//   }
-// };
-// location();
-window.onload = function (){
+
+
+
+function removeLoader (){
   var preload = document.querySelector (".pre");
-  preload.style.visibility = 'hidden';
+  preload.style.visibility = 'hidden' ;
   preload.style.opacity = '0';
 
-}
+};
 
 function hamburguerMenu () {
   navMenu.classList.toggle("nav-menu_visible");
@@ -41,6 +42,20 @@ function removeMenu () {
   }
 };
 
+function removeLineNav () {
+  contact.classList.remove("nav-menu-link_active");
+  about.classList.remove("nav-menu-link_active");
+  projects.classList.remove("nav-menu-link_active");
+  home.classList.remove("nav-menu-link_active");
+};
+
+const removeActiveBar = () => {
+  home.classList.remove("nav-menu-link_active");
+  about.classList.remove("nav-menu-link_active");
+  projects.classList.remove("nav-menu-link_active");
+  contact.classList.remove("nav-menu-link_active");
+}
+
 
 navToggle.addEventListener("click", hamburguerMenu);
 clickNav.addEventListener("click", removeMenu);
@@ -51,11 +66,8 @@ clickNav4.addEventListener("click", removeMenu);
 
 
 let home = document.querySelector("li .home");
-
-let portfolio = document.querySelector("li .portfolio");
-
-let technology = document.querySelector("li .technology");
-
+let about = document.querySelector("li .about");
+let projects = document.querySelector("li .projects");
 let contact = document.querySelector("li .contact");
 
 
@@ -64,61 +76,56 @@ let contact = document.querySelector("li .contact");
 
 
 home.addEventListener("click", () =>{
-  contact.classList.remove("nav-menu-link_active");
-  portfolio.classList.remove("nav-menu-link_active");
-  technology.classList.remove("nav-menu-link_active");
-  home.classList.add("nav-menu-link_active")
+  removeLineNav();
+  home.classList.add("nav-menu-link_active");
 });
 
-portfolio.addEventListener("click", () =>{
-  home.classList.remove("nav-menu-link_active");
-  contact.classList.remove("nav-menu-link_active");
-  technology.classList.remove("nav-menu-link_active");
-  portfolio.classList.add("nav-menu-link_active")
+about.addEventListener("click", () =>{
+  removeLineNav();
+  about.classList.add("nav-menu-link_active");
+
 });
-technology.addEventListener("click", () =>{
-  home.classList.remove("nav-menu-link_active");
-  portfolio.classList.remove("nav-menu-link_active");
-  contact.classList.remove("nav-menu-link_active");
-  technology.classList.add("nav-menu-link_active")
+projects.addEventListener("click", () =>{
+  removeLineNav();
+  projects.classList.add("nav-menu-link_active");
+
 });
 contact.addEventListener("click", () =>{
-  home.classList.remove("nav-menu-link_active");
-  portfolio.classList.remove("nav-menu-link_active");
-  technology.classList.remove("nav-menu-link_active");
-  contact.classList.add("nav-menu-link_active")
+  removeLineNav();
+  contact.classList.add("nav-menu-link_active");
+
 });
 
 
-let width = home.offsetWidth;
-let width2 = cv.offsetWidth;
 
-window.onscroll = function() {myFunction()};
+const scrollHome = document.getElementById("home");
+const scrollAbout = document.getElementById("about");
 
-function myFunction() {
-  if (document.documentElement.scrollTop > width) {
-    portfolio.classList.add("nav-menu-link_active");
-    home.classList.remove("nav-menu-link_active");
-    technology.classList.remove("nav-menu-link_active");
-    contact.classList.remove("nav-menu-link_active");
 
-  } else if (document.documentElement.scrollTop < width) {
+console.log (scrollAbout.clientHeight)
+console.log (scrollHome.clientHeight)
+const onScroll = () => {
+
+  // Get scroll value
+  const scroll = document.documentElement.scrollTop
+
+  // If scroll value is more than 0 - add class
+  if (scroll > 50) {
+    removeActiveBar();
     home.classList.add("nav-menu-link_active");
 
-    portfolio.classList.remove("nav-menu-link_active");
-    technology.classList.remove("nav-menu-link_active");
-    contact.classList.remove("nav-menu-link_active");
-    
   }
-  if (document.documentElement.scrollTop > width2) {
-    technology.classList.add("nav-menu-link_active");
-
-    portfolio.classList.remove("nav-menu-link_active");
-    home.classList.remove("nav-menu-link_active");
-    contact.classList.remove("nav-menu-link_active");
+  if (scroll > 230) {
+    removeActiveBar();
+    about.classList.add("nav-menu-link_active");
+  }
+  if (scroll > scrollAbout.clientHeight ) {
+    removeActiveBar();
+    projects.classList.add("nav-menu-link_active");
   } 
-};
-
+}
+// Use the function
+window.addEventListener('scroll', onScroll)
 
 
 
