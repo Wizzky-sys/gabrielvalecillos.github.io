@@ -6,27 +6,25 @@ const clickNav2 = document.querySelector (".about")
 const clickNav3 = document.querySelector (".projects")
 const clickNav4 = document.querySelector (".contact")
 
+// function remove pre-loader
+function removeLoader (){
+  var preload = document.querySelector (".pre");
+  preload.style.visibility = 'hidden';
+  preload.style.opacity = '0';
 
+};
+// remove pre-loader after 1500ms
 window.onload = setTimeout(removeLoader, 1500); 
 
 
 
-
-function removeLoader (){
-  var preload = document.querySelector (".pre");
-  preload.style.visibility = 'hidden' ;
-  preload.style.opacity = '0';
-
-};
-
+// function for toggle icon menu 
 function hamburguerMenu () {
   navMenu.classList.toggle("nav-menu_visible");
   if (navMenu.classList.contains("nav-menu_visible")) {
     navToggle2.setAttribute("class", "fa-solid fa-x");
-
   } else {
     navToggle2.setAttribute("class", "fas fa-bars");
-
   }
 };
 
@@ -46,15 +44,10 @@ function removeLineNav () {
   home.classList.remove("nav-menu-link_active");
 };
 
-const removeActiveBar = () => {
-  home.classList.remove("nav-menu-link_active");
-  about.classList.remove("nav-menu-link_active");
-  projects.classList.remove("nav-menu-link_active");
-  contact.classList.remove("nav-menu-link_active");
-}
-
-
+// al dar click al menu, se despliega el contenido
 navToggle.addEventListener("click", hamburguerMenu);
+
+// al dar click en cualquier elemento de la lista el menu se remueve
 clickNav.addEventListener("click", removeMenu);
 clickNav2.addEventListener("click", removeMenu);
 clickNav3.addEventListener("click", removeMenu);
@@ -100,35 +93,27 @@ const scrollAbout = document.getElementById("about");
 const scrollProjects = document.getElementById("projects");
 const scrollContact = document.getElementById("contact");
 
-
-console.log (scrollHome.clientHeight+ 'Home')
-console.log (scrollAbout.clientHeight+ 'About')
-console.log (scrollProjects.clientHeight+ 'Projects')
-console.log (scrollContact.clientHeight + 'Contact')
-
-
-
 const onScroll = () => {
 
   // Get scroll value
   const scroll = document.documentElement.scrollTop
 
-  // If scroll value is more than 0 - add class
-  if (scroll > 0) {
-    removeActiveBar();
-    home.classList.add("nav-menu-link_active");
+  const sAbout = scrollAbout.offsetTop;
+  const sProjects = scrollProjects.offsetTop;
+  const sContact = scrollContact.offsetTop;
 
-  }
-  if (scroll > scrollHome.clientHeight) {
-    removeActiveBar();
+  // If scroll value is more than 0 - add class
+  if (scroll >= 0 && scroll <= sAbout) {
+    removeLineNav();
+    home.classList.add("nav-menu-link_active");
+  } else if (scroll > sAbout && scroll <= sProjects) {
+    removeLineNav();
     about.classList.add("nav-menu-link_active");
-  }
-  if (scroll > scrollAbout.clientHeight + 150 ) {
-    removeActiveBar();
+  } else if (scroll > sProjects && scroll <= sContact) {
+    removeLineNav();
     projects.classList.add("nav-menu-link_active");
-  }
-  if (scroll > scrollProjects.clientHeight + 1000 ) {
-    removeActiveBar();
+  } else if (scroll > sContact) {
+    removeLineNav();
     contact.classList.add("nav-menu-link_active");
   }
 
