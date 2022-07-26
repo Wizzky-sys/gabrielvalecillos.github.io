@@ -2,7 +2,7 @@
   --colordarkblue: rgb(5, 20, 31);
   --colorsemiblue: 
   #232628;
-  --colorblue: #3282B8;
+  --colorblue: #00ffff;
   --colorbluelight: #BBE1FA;
   --colorblanco: #fff;
 }
@@ -147,6 +147,7 @@ body {
   margin-bottom: 20px;
 
 }
+
 .intro h1 {
   letter-spacing:3px;
   line-height: 20px;
@@ -162,7 +163,7 @@ body {
 .intro h3 {
   width: 100%;
   line-height: 20px;
-  color: #FFFFFF;
+  color: var(--colorblue);
   text-shadow: 0 0 20px rgb(0 0 0 / 50%);
   margin-bottom: 40px;
   text-transform: uppercase;
@@ -260,9 +261,9 @@ body {
 #about {
   height: 1000px;
   width: 100%;
+  color: #FFFFFF;
 
   padding-bottom: 60px;
-  color: #FFFFFF;
 }
 
 .pruebaredondo {
@@ -281,7 +282,6 @@ body {
 }
 .cv-main {
   display: flex;
-  color: #FFFFFF;
   align-items: center;
   flex-direction: column;
   padding-top: 5vh;
@@ -289,6 +289,11 @@ body {
   margin: 0 20px;
   font-size: 20px;
 }
+.cv-main h5 {
+  color: var(--colorblue);
+}
+
+
 .cv-foto {
   border-radius: 50px;
 }
