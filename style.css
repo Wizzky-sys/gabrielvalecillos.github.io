@@ -115,11 +115,11 @@ body {
 .nav-menu-link,
 .intro_button_style {
   text-decoration: none;
-  background-image: linear-gradient(white, white);
+  background-image: linear-gradient(#00ffff, #00ffff);
   background-position: 50% 100%;
   background-repeat: no-repeat;
-  background-size: 0% 3px;
-  transition: background-size .5s;
+  background-size: 0% 3.5px;
+  transition: background-size .3s;
 }
 
 .nav-menu-link:hover,
@@ -259,14 +259,14 @@ body {
 
 
 #about {
-  height: 1000px;
+  height: 900px;
   width: 100%;
   color: #FFFFFF;
-
+  padding-top: 11vh;
   padding-bottom: 60px;
 }
 
-.pruebaredondo {
+.cv-container {
   width: 70%;
   max-width: 1200px;
   height: 100%;
@@ -363,16 +363,10 @@ body {
   width: 100%;
   position: relative;
   height: 300px;
-  /* From https://css.glass */
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(1.7px);
-  -webkit-backdrop-filter: blur(1.7px);
-  border: 1px solid rgba(255, 255, 255, 1);
-  font-size: 18px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: var(--colorsemiblue);
   transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border-radius: 50px;
+  border: 1px solid white;
 }
 
 .projcard:hover{
@@ -389,6 +383,7 @@ body {
   width: 50%;
   font-size: 20px;
   color: #FFFFFF;
+  overflow: hidden;
 }
 
 
@@ -400,9 +395,8 @@ body {
   color: #424242;
   height: 50%;
   width: 90%;
-  overflow-y: scroll;
-  overflow-x: hidden;
   color: #FFFFFF;
+  overflow: hidden;
   cursor: pointer;
 }
 
@@ -524,6 +518,14 @@ body {
 
 #contact {
   height: 600px;
+  width: 35%;
+  margin: auto;
+  background-color: var(--colorsemiblue);
+  border-radius: 50px;
+}
+
+.contact-info {
+  color: #FFFFFF;
 }
 
 #form {
@@ -599,10 +601,10 @@ textarea {
   .projcard-container { 
 
     display: grid;
-    width: 100%;
+    width: 80%;
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
-    margin: 0;
+    margin: auto;
     padding-top: 50px;
   
   }
@@ -673,6 +675,7 @@ textarea {
     display: none;
   }
 
+  
   .nav-toggle {
     display: flex;
     width: 0px;
@@ -703,7 +706,8 @@ textarea {
   #about {
     height: 1300px;
   }
-  .pruebaredondo {
+  .cv-container {
     width: 90%;
+    height: 1250px;
   }
 }
