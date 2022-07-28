@@ -2,7 +2,7 @@
   --colordarkblue: rgb(5, 20, 31);
   --colorsemiblue: 
   #232628;
-  --colorblue: #00ffff;
+  --colorblue: #09ff00;
   --colorbluelight: #BBE1FA;
   --colorblanco: #fff;
 }
@@ -65,13 +65,15 @@ body {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   background-color: rgba(5, 20, 31, 0.4);
   backdrop-filter: blur(5px);
   height: 80px;
-  top: 0;
+  width: 100%;
   left: 0;
+  top: 0;
   z-index: 5;
+  transition: all .5s;
 
 }
 
@@ -89,6 +91,7 @@ body {
 .nav {
  display: flex;
  height: 80px;
+
 }
 
 .nav-link {
@@ -98,6 +101,7 @@ body {
 
 .nav-menu {
   display: flex;
+
   justify-content: center;
   margin: 0 20px;
   list-style: none;
@@ -115,7 +119,7 @@ body {
 .nav-menu-link,
 .intro_button_style {
   text-decoration: none;
-  background-image: linear-gradient(#00ffff, #00ffff);
+  background-image: linear-gradient(#27fa27, #09ff00);
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: 0% 3.5px;
@@ -130,7 +134,7 @@ body {
 
 .intro {
   display: flex;
-  height: 100vh;
+  height: 110vh;
   justify-content: center;
   flex-direction: column-reverse;
   align-items: center;
@@ -262,7 +266,7 @@ body {
   height: 900px;
   width: 100%;
   color: #FFFFFF;
-  padding-top: 11vh;
+  padding-top: 3vh;
   padding-bottom: 60px;
 }
 
@@ -468,7 +472,7 @@ body {
   position: relative;
   top: -60px;
   width: 100%;
-  height: 150px;
+  height: 100px;
   justify-content: center;
 }
 
@@ -476,7 +480,7 @@ body {
   padding-top: 5px;
   border-radius: 15px;
   height: 200px;
-  width: 80%;
+  width: 300px;
 }
 
 .projcard {
@@ -648,11 +652,11 @@ textarea {
     align-items: center;
     justify-content: flex-start;
     margin: 0;
-    background-color: var(--colordarkblue);
+    background-color: var(--colorsemiblue);
     width: 100%;
     backdrop-filter: blur(10px);
     transform: translateY(-100%);
-    transition: 1s;
+    transition: ease-in .5s;
     height: 100vh;
     z-index: 2;
     padding: 0;
@@ -662,7 +666,7 @@ textarea {
 
   .nav-menu_visible {
     transform: translateY(0%);
-    transition: 1s;
+    transition: ease-in .5s;
   }
 
   .intro {

@@ -1,25 +1,34 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navToggle2 = document.querySelector(".nav-toggle i");
 const navMenu = document.querySelector(".nav-menu");
-const clickNav = document.querySelector (".home")
-const clickNav2 = document.querySelector (".about")
-const clickNav3 = document.querySelector (".projects")
-const clickNav4 = document.querySelector (".contact")
 
 // function remove pre-loader
-function removeLoader (){
+const removeLoader = () => {
   var preload = document.querySelector (".pre");
   preload.style.visibility = 'hidden';
   preload.style.opacity = '0';
 
 };
+
+let ubicacionactual = window.pageYOffset;
+window.onscroll = function () {
+  let desplaza_actual = window.pageYOffset;
+  if (ubicacionactual >= desplaza_actual) {
+    document.querySelector(".header").style.top = '0';
+
+  } else {
+    document.querySelector(".header").style.top = '-100px';
+  }
+  ubicacionactual = desplaza_actual;
+}
+
 // remove pre-loader after 1500ms
 window.onload = setTimeout(removeLoader, 1500); 
 
 
 
 // function for toggle icon menu 
-function hamburguerMenu () {
+const hamburguerMenu = () => {
   navMenu.classList.toggle("nav-menu_visible");
   if (navMenu.classList.contains("nav-menu_visible")) {
     navToggle2.setAttribute("class", "fa-solid fa-x");
@@ -28,7 +37,10 @@ function hamburguerMenu () {
   }
 };
 
-function removeMenu () {
+
+
+// cambia el icono de hamburguesa a una x
+const removeMenu = () => {
   navMenu.classList.remove("nav-menu_visible");
   if (navMenu.classList.contains("nav-menu_visible")) {
     navToggle2.setAttribute("class", "fa-solid fa-x");
@@ -37,54 +49,44 @@ function removeMenu () {
   }
 };
 
-function removeLineNav () {
-  contact.classList.remove("nav-menu-link_active");
-  about.classList.remove("nav-menu-link_active");
-  projects.classList.remove("nav-menu-link_active");
-  home.classList.remove("nav-menu-link_active");
+
+
+// remueve la linea blanca debajo de los nav
+const removeLineNav = () => {
+  document.querySelectorAll('.nav-menu-link_active').forEach(item => {
+    item.classList.remove("nav-menu-link_active");
+  });
 };
 
-// al dar click al menu, se despliega el contenido
+
+
+const home = document.querySelector(".home");
+const about = document.querySelector(".about");
+const projects = document.querySelector(".projects");
+const contact = document.querySelector(".contact");
+
+
+// click al menu, se despliega el contenido
 navToggle.addEventListener("click", hamburguerMenu);
 
-// al dar click en cualquier elemento de la lista el menu se remueve
-clickNav.addEventListener("click", removeMenu);
-clickNav2.addEventListener("click", removeMenu);
-clickNav3.addEventListener("click", removeMenu);
-clickNav4.addEventListener("click", removeMenu);
-
-
-
-let home = document.querySelector("li .home");
-let about = document.querySelector("li .about");
-let projects = document.querySelector("li .projects");
-let contact = document.querySelector("li .contact");
-
-
-
-
-
-
-home.addEventListener("click", () =>{
-  removeLineNav();
-  home.classList.add("nav-menu-link_active");
+//onclick en cualquier elemento del menu en version mobile, se remueve automaticamente 
+document.querySelectorAll('.nav-menu-link').forEach(item => {
+  item.addEventListener("click", () => {
+    removeMenu();
+  });
 });
 
-about.addEventListener("click", () =>{
-  removeLineNav();
-  about.classList.add("nav-menu-link_active");
-
+//remueve todas las lineas de demas nav y se la aplica al que se da click
+document.querySelectorAll('.nav-menu-link').forEach(item => {
+  item.addEventListener("click", () => {
+    removeLineNav();
+    item.classList.add("nav-menu-link_active");
+  });
 });
-projects.addEventListener("click", () =>{
-  removeLineNav();
-  projects.classList.add("nav-menu-link_active");
 
-});
-contact.addEventListener("click", () =>{
-  removeLineNav();
-  contact.classList.add("nav-menu-link_active");
-
-});
+// setInterval(() => {
+//   alert('olamundo')
+// }, 11400);
 
 
 
