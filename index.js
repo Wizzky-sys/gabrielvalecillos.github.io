@@ -1,6 +1,11 @@
 const navToggle = document.querySelector(".nav-toggle");
 const navToggle2 = document.querySelector(".nav-toggle i");
 const navMenu = document.querySelector(".nav-menu");
+const btnSwitch = document.querySelector("#switch");
+const logolight = document.querySelector(".logo-btn .logo")
+const logodark = document.querySelector(".logo-btn .logodark")
+
+
 
 // function remove pre-loader
 const removeLoader = () => {
@@ -25,7 +30,17 @@ window.onscroll = function () {
 // remove pre-loader after 1500ms
 window.onload = setTimeout(removeLoader, 1500); 
 
-
+btnSwitch.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  btnSwitch.classList.toggle('switch_active')
+  if (btnSwitch.classList.contains('switch_active')) {
+    logolight.style.display = 'none'
+    logodark.style.display = 'flex'
+  } else {
+    logolight.style.display = 'flex'
+    logodark.style.display = 'none'
+  }
+});
 
 // function for toggle icon menu 
 const hamburguerMenu = () => {
