@@ -103,8 +103,8 @@ document.querySelectorAll('.nav-menu-link').forEach(item => {
 
 const scrollHome = document.getElementById("home");
 const scrollAbout = document.getElementById("about");
+const scrollServices = document.getElementById("services");
 const scrollProjects = document.getElementById("projects");
-const scrollContact = document.getElementById("contact");
 
 const onScroll = () => {
 
@@ -112,20 +112,20 @@ const onScroll = () => {
   const scroll = document.documentElement.scrollTop
 
   const sAbout = scrollAbout.offsetTop;
+  const sServices = scrollServices.offsetTop;
   const sProjects = scrollProjects.offsetTop;
-  const sContact = scrollContact.offsetTop;
 
   // If scroll value is more than 0 - add class
   if (scroll >= 0 && scroll <= sAbout) {
     removeLineNav();
     home.classList.add("nav-menu-link_active");
-  } else if (scroll > sAbout && scroll <= sProjects) {
+  } else if (scroll > sAbout && scroll <= sServices) {
     removeLineNav();
     about.classList.add("nav-menu-link_active");
-  } else if (scroll > sProjects && scroll <= sContact) {
+  } else if (scroll > sServices && scroll <= sProjects) {
     removeLineNav();
     projects.classList.add("nav-menu-link_active");
-  } else if (scroll > sContact) {
+  } else if (scroll > sProjects) {
     removeLineNav();
     contact.classList.add("nav-menu-link_active");
   }

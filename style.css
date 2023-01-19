@@ -811,7 +811,21 @@ footer .social a {
   font-size: 13px;
 }
  /* MOBILE */
-@media (max-width: 900px) {
+ @media (max-width: 1300px) {
+  #services {
+    height: 1050px;
+  }
+  .services-container {
+    height: 900px;
+  }
+  #projects {
+    height: 1050px;
+  }
+
+
+
+}
+@media (max-width: 950px) {
 
   /*START hamburguer menu*/
   .nav-menu {
