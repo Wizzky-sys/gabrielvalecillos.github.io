@@ -142,13 +142,15 @@ body {
 .nav-menu-link,
 .intro_button_style {
   text-decoration: none;
-  background-image: linear-gradient(#71d7ff, #52abce);
+  background-image: linear-gradient(#ffffff, #ffffff);
   background-position: 50% 100%;
   background-repeat: no-repeat;
   background-size: 0% 3.5px;
   transition: background-size .3s;
 }
-
+.dark .nav-menu-link {
+  background-image: linear-gradient(#000000, #000000);
+}
 .nav-menu-link:hover,
 .intro_button_style:hover,
 .nav-menu-link_active {
@@ -173,6 +175,10 @@ body {
   display: block;
   background: none;
   color: #fff;
+}
+
+.dark .switch, .dark .switch span {
+  color: black;
 }
 .switch::after {
   content: "";
@@ -296,8 +302,9 @@ body {
   border: 1px solid rgb(255, 255, 255);
 }
 .dark .intro_button_style a {
-  letter-spacing: -1px;
+  font-size: 16px;
   color: #000;
+  font-weight: 700;
 }
 
 .intro :nth-child(1) {
@@ -725,9 +732,14 @@ body {
   opacity: 0;
   transition: all .5s ease;
 }
+
 .inner img {
   background-color: rgba(52, 54, 54, 0.7);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 28px, rgba(0, 0, 0, 0.12) 0px 15px 12px;
+}
+
+.inner img:hover .overlay {
+  opacity: 1;
 }
 
 .overlay:hover {
