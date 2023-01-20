@@ -157,6 +157,25 @@ body {
   background-size: 100% 3px;
 }
 
+.spanish {
+  display: none;
+}
+
+.spanish, .english {
+  cursor: pointer;
+}
+
+.switch-language{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+
+
+
+
 .switch {
   display: flex;
   background-color: grey;
@@ -810,6 +829,10 @@ footer .social a {
   font-weight: 400;
   font-size: 13px;
 }
+
+
+
+
  /* MOBILE */
  @media (max-width: 1300px) {
   #services {

@@ -5,8 +5,11 @@ const navToggle = document.querySelector(".nav-toggle");
 const navToggle2 = document.querySelector(".nav-toggle i");
 const navMenu = document.querySelector(".nav-menu");
 const btnSwitch = document.querySelector("#switch");
+const btnSwitch2 = document.querySelector("#switch-language");
 const logolight = document.querySelector(".logo-btn .logo")
 const logodark = document.querySelector(".logo-btn .logodark")
+const flagspanish = document.querySelector (".spanish")
+const flagenglish = document.querySelector (".english")
 
 
 
@@ -35,6 +38,16 @@ btnSwitch.addEventListener('click', () => {
   } else {
     logolight.style.display = 'flex'
     logodark.style.display = 'none'
+  }
+});
+btnSwitch2.addEventListener('click', () => {
+  btnSwitch2.classList.toggle('switch-language-spanish')
+  if (btnSwitch2.classList.contains('switch-language-spanish')) {
+    flagspanish.style.display = 'none'
+    flagenglish.style.display = 'flex'
+  } else {
+    flagspanish.style.display = 'flex'
+    flagenglish.style.display = 'none'
   }
 });
 
