@@ -1,0 +1,20 @@
+#imageContainer {
+    position: relative;
+    display: inline-block;
+}
+
+#overlay {
+    display: none;
+    position: absolute;
+    border: 2px solid rgb(0, 0, 0);
+    background-color: white;
+    padding: 10px;
+}
+
+
+
+
+.large-text {
+    font-size: 50px; /* Cambia este valor según tus preferencias */
+  }
+  

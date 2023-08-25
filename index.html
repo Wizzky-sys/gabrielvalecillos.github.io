@@ -1,401 +1,103 @@
 <!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gabriel Valecillos</title>
-    <!-- Place your kit's code here -->
-    <script src="https://kit.fontawesome.com/83c76830de.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/1531/1531344.png" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
-  </head>
-  <body class="">
-    <!-- Pre-loader -->
-    <div class="pre">
-      <div class="preloader"></div>
-    </div>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<div id="imageContainer">
+  <img id="myImage" src="SALA 2 DISEÑO HD.png" alt="Imagen">
+  <div id="overlay"></div>
+</div>
 
 
-    <!-- header  -->
-    <header class="header">
-      <nav class="nav">   
-        <button class="nav-toggle">
-
-          <i class="fas fa-bars"></i>
-        </button>
-        <div class="logo-btn" >
-          <img class="logo" src="images/logotipo.png" alt="10" width="90" height="90">
-          <img class="logodark" src="images/logotipodark.png" alt="10" width="90" height="90">
-        </div>
-        <ul class="nav-menu">
-          <li class="nav-menu-item">
-            <a href="#home" class="nav-menu-link nav-link nav-menu-link_active home">Home</a>
-          </li>
-          <li class="nav-menu-item">
-            <a href="#about" class="nav-menu-link nav-link about">About</a>
-          </li>
-          <li class="nav-menu-item">
-            <a href="#services" class="nav-menu-link nav-link projects">Services</a>
-          </li>
-          <li class="nav-menu-item">
-            <a href="#projects" class="nav-menu-link nav-link contact">Portfolio</a>
-          </li>
-          <li class="nav-menu-item">
-            <li class="switch-menu">
-              <div id="switch-language" class="switch-language">
-                <img class="flag spanish" src="images/spanish-flag.png">
-                <img class="flag english" src="images/english-flag.png">
-              </div>
-            </li>
-            <li class="switch-menu">
-              <button id="switch" class="switch">
-                <span><i class="fas fa-sun"></i></span>
-                <span><i class="fas fa-moon"></i></span>
-              </button>
-            </li>
-          </li>
-        </ul>
-      </nav>
-    </header>
-
-
-    <main>
-    
-      <!-- Intro -->
-      <section id="home">
-
-        <div class="intro">
-          <div class="nombre" id="nombre">
-            <h1> I'm <br> Gabriel Valecillos</h1>
-          </div>
-          <div class="intro_second">
-            <h3>Hello, world</h3>
-          </div>
-          <div class="intro_button">
-            <button class="intro_button_style">
-              <a href="https://drive.google.com/file/d/1QgdUNup9Ncy3ZfT_55LSSDyMJTKrBC0g/view?usp=sharing" target="_blank" class="button_about">Download CV</a>
-            </button>
-          </div>
-        </div>
-        <!-- social section -->
-        <ul class="socialmedia">
-          <li>
-            <a href="https://www.linkedin.com/in/gabriel-valecillos-847126210/" target="_blank" class="icon-socialmedia linkedin">
-              <span><i class="fa-brands fa-linkedin"></i></span>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/Wizzky-sys" target="_blank" class="icon-socialmedia github">
-              <span><i class="fa-brands fa-github"></i></span>
-            </a>
-          </li>
-          <li>
-            <a href="https://wa.me/584123592208?text=Hola,%20estoy%20interesad@%20en%20tus%20servicios%20de%20desarrollo%20web." target="_blank" class="icon-socialmedia whatsapp">
-              <span><i class="fa-brands fa-whatsapp"></i></span>
-            </a>
-          </li>
-        </ul>
-      </section>
-
-
-      <!-- About -->
-      <section id="about">
-        <div class="about-container">
-          <div class="about-title">
-            <h5>ABOUT</h5>
-            <span class="cv-h1"> 
-              <h1>Let me introduce myself.</h1>
-            </span>
-          </div>
-
-          <div class="about-intro">
-            <div>
-              <img class= "about-foto" src="https://avatars.githubusercontent.com/u/59260137?s=400&u=b57f7a8f1204f45f19b1419ee3e3a40162ffe4bc&v=4" 
-              alt="10" width="130" height="130">
-            </div>
-            <p class="about-info">
-              I'm a responsible, dynamic, creative, thoughtful and self-taught person, with ease of adaptation and ability to work in a team, under high pressure conditions, with initiative to solve problems efficiently and achieve the objectives set by the company.
-            </p>
-            <br>
-          </div>
-
-          <div class="container-about-data-skill">
-              <p class="about-data">
-                <strong>FULL NAME:</strong>
-                Gabriel Alejandro Valecillos Aular
-                <strong>JOB:</strong>
-                Frontend Web Developer
-                <strong>EMAIL:</strong>
-                alejandrovalecillosaular@gmail.com
-                <strong>BIRTH DATE:</strong>
-                Jan 30, 1999
-              </p>
-          </div>
-        </div>
-      </section>
-      
-      <!-- Skills -->
-      <section id="skills">
-
-        <div class="skills-title">
-          <h5>SKILLS</h5>
-        </div>
-        <div class="skills-container">
-          <div class="skill-box">
-            <div class="icon_html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 39.768 47.688">
-                    <g transform="translate(-4183.325 -5352.749)" fill="#fff">
-                        <path d="M4223.093,5369.1h-8.959l-.712-7.781h-19.259l-.931,11.612h29.861l-2.337,23.359-18.281,4.149-18.06-4.149-1.09-12.2h8.834l.653,6.042,9.662,2.173,9.892-2.173,1.055-9.72h-30.1l2.848-27.662h35.4Z"></path>
-                    </g>
-                </svg>
-            </div>
-            <div class="block_html_icon">
-                <h6>HTML</h6>
-                <p>HyperText Markup Language</p>
-            </div>
-          </div>
+<script>
+    const image = document.getElementById('myImage');
+    const overlay = document.getElementById('overlay');
+    const clickAreaRadius = 10;
   
-          <div class="skill-box">
-            <div class="icon_css">
-              <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 42.579 47.793">
-                  <g transform="translate(-3253.366 -5089.045)" fill="#fff">
-                      <path d="M3295.945,5089.045h-42.579l.838,8.525h21.089l-20.173,8.486.67,8.556h28.8l-.513,10.237-9.374,2.655-9.3-2.655v-6.48h-9.2l1.287,13.732,17.216,4.736,17.33-4.736,2.231-26.045h-18.545l19.347-8.486Z"></path>
-                  </g>
-              </svg>
-            </div>
-            <div class="block_css_icon">
-              <h6>CSS</h6>
-              <p>
-                Generates the visual design to the web</p>
-            </div>
-          </div>
+    const puestos = [
+        //PUESTO 1
+        { x1: 715, y1: 560, x2: 1183, y2: 784 },
+        //PUESTO 2
+        { x1: 1201, y1: 561, x2: 1671, y2: 784 },
+        //PUESTO 3
+        { x1: 1684, y1: 564, x2: 2151, y2: 784 },
+        //PUESTO 4
+        { x1: 2164, y1: 561, x2: 2631, y2: 784 },
+        //PUESTO 5
+        { x1: 2648, y1: 563, x2: 3119, y2: 784 },
+        //PUESTO 6
+        { x1: 523, y1: 1500, x2: 993, y2: 1721 },
+        //PUESTO 7
+        { x1: 1007, y1: 1500, x2: 1477, y2: 1721 },
+        //PUESTO 8
+        { x1: 1492, y1: 1500, x2: 1963, y2: 1721 },
+        //PUESTO 9
+        { x1: 1976, y1: 1500, x2: 2445, y2: 1721 },
+        //PUESTO 10
+        { x1: 2457, y1: 1500, x2: 2927, y2: 1721 },
+        //PUESTO 11
+        { x1: 2937, y1: 1500, x2: 3411, y2: 1721 },
+        //PUESTO 12
+        { x1: 523, y1: 1736, x2: 995, y2: 1960 },
+        //PUESTO 13
+        { x1: 1003, y1: 1736, x2: 1480, y2: 1960 },
+        //PUESTO 14
+        { x1: 1488, y1: 1736, x2: 1961, y2: 1960 },
+        //PUESTO 15
+        { x1: 1973, y1: 1736, x2: 2446, y2: 1960 },
+        //PUESTO 16
+        { x1: 2456, y1: 1736, x2: 2927, y2: 1960 },
+        //PUESTO 17
+        { x1: 2938, y1: 1736, x2: 3411, y2: 1960 },
+        //PUESTO 18
+        { x1: 1482, y1: 2718, x2: 1956, y2: 2947 },
+        //PUESTO 19
+        { x1: 1965, y1: 2718, x2: 2436, y2: 2947 },
+        //PUESTO 20
+        { x1: 2448, y1: 2718, x2: 2920, y2: 2947 },
+        //PUESTO 21
+        { x1: 2933, y1: 2718, x2: 3406, y2: 2947 }
+    ];
   
-          <div class="skill-box">
-            <div class="icon_js">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 39.768 47.688">
-                    <g transform="translate(-4183.325 -5352.749)" fill="#fff">
-                        <path d="M4223.093,5369.1h-8.959l-.712-7.781h-19.259l-.931,11.612h29.861l-2.337,23.359-18.281,4.149-18.06-4.149-1.09-12.2h8.834l.653,6.042,9.662,2.173,9.892-2.173,1.055-9.72h-30.1l2.848-27.662h35.4Z"></path>
-                    </g>
-                </svg>
-            </div>
-            <div class="block_js_icon">
-                <h6>JavaScript</h6>
-                <p>
-                  Programming language</p>
-            </div>
-          </div>
+    console.log(puestos)
+    image.addEventListener('click', function(event) {
+      const x = event.offsetX;
+      const y = event.offsetY;
+  
+      overlay.style.left = `${x}px`;
+      overlay.style.top = `${y}px`;
+  
+      let touchedPuesto = null;
+      for (let i = 0; i < puestos.length; i++) {
+        if (isWithinRange(x, y, puestos[i])) {
+          touchedPuesto = puestos[i];
+          console.log(puestos[i])
+          break;
+        }
+      }
+  
+      if (touchedPuesto) {
+        overlay.innerHTML = `<span class="large-text">Asesora <br> en el puesto ${puestos.indexOf(touchedPuesto) + 1}</span>`;
+      } else {
+        overlay.innerHTML = `<span class="large-text">(${x}, ${y})</span>`;
+      }
 
-          <div class="skill-box">
-            <div class="icon_react">
-                  <img src="images/icons/react.svg" width="36" height="36">
-            </div>
-            <div class="block_react_icon">
-                <h6>React</h6>
-                <p>Library written in JavaScript</p>
-            </div>
-          </div>
-          <div class="skill-box">
-            <div class="icon_figma">
-                <img src="images/icons/figma.svg" width="36" height="36">
-            </div>
-            <div class="block_figma_icon">
-                <h6>Figma</h6>
-                <p>Vector graphics editor</p>
-            </div>
-          </div>
-          <div class="skill-box">
-            <div class="icon_git">
-                <img src="images/icons/git.svg" width="36" height="36">
-            </div>
-            <div class="block_git_icon">
-                <h6>Git</h6>
-                <p>Control version system</p>
-          </div>
-      </section>
+      overlay.style.display = 'block';
+    });
+  
+    overlay.addEventListener('click', function() {
+      overlay.style.display = 'none';
+    });
+  
+    function isWithinRange(x, y, range) {
+      return x >= range.x1 && x <= range.x2 && y >= range.y1 && y <= range.y2;
+    }
+  </script>
+  
 
-      <!-- Services -->
-      <section id="services">
-        <div class="services-title">
-          <h5>SERVICES</h5>
-        </div>
-        <div class="services-container">
-
-          <div class="box">
-            <div class="icon">
-              <span class="service_icon"><i class="fa-solid fa-earth-americas"></i></span>
-            </div>
-            <h5>Social media integration</h5>
-            <p>
-              There are many social platforms out there and you should promote your presence on them on your website.</p>
-          </div>
-          <div class="box">
-            <div class="icon">
-              <span class="service_icon"><i class="fa-solid fa-code"></i></span>
-            </div>
-            <h5>Development</h5>
-            <p>I know the importance of web design and I can help you create a website that you will love.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <span class="service_icon"><i class="fa-regular fa-pen-to-square"></i></span>
-            </div>
-            <h5>Responsive Design</h5>
-            <p>
-              Your site will display correctly on any device, including desktop computers, tablets, and mobile phones.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <span class="service_icon"><i class="fa-solid fa-palette"></i></span>
-            </div>
-            <h5>Creative Design</h5>
-            <p>
-              Attractive web design with an intuitive interface that allows you to offer a pleasant experience to customers.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <span class="service_icon"><i class="fa-solid fa-heart"></i></span>
-            </div>
-            <h5>CEO</h5>
-            <p>I will optimize your site with a smart search engine optimization strategy to generate leads.</p>
-          </div>
-
-          <div class="box">
-            <div class="icon">
-              <span class="service_icon"><i class="fa-solid fa-wifi"></i></span>
-            </div>
-            <h5>Performance</h5>
-            <p>Retaining users is essential to improve conversions. High performing sites attract and retain users.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects -->
-      <section id="projects">
-        <div class="projects-title">
-          <h5>PROJECTS</h5>
-        </div>
-        <div class="projects-container">
-          <div class="item" data-id="web">
-            <div class="inner">
-                <img src="images/todoapp.png">
-                <div class="overlay">
-                    <h4>To-Do APP</h4>
-                    <p>HTML - CSS - JS</p>
-                    <a href="https://to-do-gabriel.netlify.app/" target="_blank">
-                        <span class="fas fa-external-link-alt" aria-hidden="true"></span>Demo
-                    </a>
-                </div>
-            </div>
-          </div>
-
-
-          <div class="item" data-id="web">
-            <div class="inner">
-              <img src="images/calculatorapp.png">
-                <div class="overlay">
-                    <h4>Calculator APP</h4>
-                    <p>HTML - CSS - JS</p>
-                    <a href="https://calculator-gabriel-app.netlify.app/" target="_blank">
-                        <span class="fas fa-external-link-alt" aria-hidden="true"></span>Demo
-                    </a>
-                </div>
-              </div>
-          </div>
-          
-          <div class="item" data-id="web">
-            <div class="inner">
-              <img src="images/under-construction.jpg">
-                <div class="overlay">
-                    <h4></h4>
-                    <p></p>
-                    <a href="https://gabrielvalecillos.netlify.app/" target="_blank">
-                        <span class="fas fa-external-link-alt" aria-hidden="true"></span>
-                    </a>
-                </div>
-              </div>
-          </div>
-
-          <div class="item" data-id="web">
-            <div class="inner">
-              <img src="images/under-construction.jpg">
-                <div class="overlay">
-                    <h4></h4>
-                    <p></p>
-                    <a href="https://gabrielvalecillos.netlify.app/" target="_blank">
-                        <span class="fas fa-external-link-alt" aria-hidden="true"></span>
-                    </a>
-                </div>
-              </div>
-          </div>
-
-          <div class="item" data-id="web">
-            <div class="inner">
-              <img src="images/under-construction.jpg">
-                <div class="overlay">
-                    <h4></h4>
-                    <p></p>
-                    <a href="https://gabrielvalecillos.netlify.app/" target="_blank">
-                        <span class="fas fa-external-link-alt" aria-hidden="true"></span>
-                    </a>
-                </div>
-              </div>
-          </div>
-
-          <div class="item" data-id="web">
-            <div class="inner">
-              <img src="images/under-construction.jpg">
-                <div class="overlay">
-                    <h4></h4>
-                    <p></p>
-                    <a href="https://gabrielvalecillos.netlify.app/" target="_blank">
-                        <span class="fas fa-external-link-alt" aria-hidden="true"></span>
-                    </a>
-                </div>
-              </div>
-          </div>
-
-
-
-
-
-
-
-        </div>
-
-      </section>
-      <!-- Footer -->
-      <footer>
-        <div class="container-footer">
-            <div class="row">
-                <div class="logo">
-                    Do you want to work with me?
-                </div>
-                <p class="text-footer">
-                    I am a web developer and I do development services for clients of all sizes, specializing in building sites 
-                    elegant and modern web. If you want to communicate with me or are interested in starting a project together, get in touch.</p>
-                <div class="social">
-                    <a href="https://www.facebook.com/Gabrieldosmil/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    <a href="kedin.com/in/gabriel-valecillos-847126210/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/gabrielvalecillos_/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Copyright -->
-    <section class="copyright">
-      <div class="container">
-          <p>Gabriel Valecillos 2023</p>
-      </div>
-    </section>
-
-    </main>
-  </body>
-  <script defer src="js/index.js" type="module"></script>
+</body>
 </html>
+
+
